@@ -1,6 +1,6 @@
-function areaDisplay(area) {
-    console.log(`Area of Triangle: ${area} cm²`);
-    document.getElementById("result").innerText = `Area of Triangle: ${area} cm²`;
+function areaDisplay(shape, area) {
+    console.log(`Area of ${shape}: ${area} cm²`);
+    document.getElementById("result").innerText = `Area of ${shape}: ${area} cm²`;
 }
     
 function isNum(x, y) {
@@ -18,7 +18,7 @@ function triangle(){
     }
     const area = 0.5 * base * height;
     console.log(`B = ${base} cm, H = ${height} cm`);
-    areaDisplay(area);
+    areaDisplay("Triangle", area);
 }
 
 function rectangle(){
@@ -29,7 +29,7 @@ function rectangle(){
     }
     const area = width * length;
     console.log(`W = ${width} cm, L = ${length} cm`);
-    areaDisplay(area);
+    areaDisplay("Rectangle", area);
 }
 
 function parallelogram(){
@@ -40,7 +40,7 @@ function parallelogram(){
     }
     const area = base * height;
     console.log(`B = ${base} cm, H = ${height} cm`);
-    areaDisplay(area);
+    areaDisplay("Parallelogram", area);
 }
 
 function rhombus(){
@@ -51,7 +51,7 @@ function rhombus(){
     }
     const area = 0.5 * d1 * d2;
     console.log(`D1 = ${d1} cm, D2 = ${d2} cm`);
-    areaDisplay(area);
+    areaDisplay("Rhombus", area);
 }
 
 function pentagon(){
@@ -62,7 +62,7 @@ function pentagon(){
     }
     const area = (5 * side * apothem) / 2;
     console.log(`Side = ${side} cm, Apothem = ${apothem} cm`);
-    areaDisplay(area);
+    areaDisplay("Pentagon", area);
 }
 
 function ellipse(){
@@ -73,5 +73,5 @@ function ellipse(){
     }
     const area = 3.1416 * a * b;
     console.log(`A = ${a} cm, B = ${b} cm`);
-    areaDisplay(area);
+    areaDisplay("Ellipse", area);
 }
